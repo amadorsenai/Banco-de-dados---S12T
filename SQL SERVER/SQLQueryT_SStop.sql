@@ -44,8 +44,24 @@ DELETE FROM Artistas WHERE IdEstiloMusical = 2;
 SELECT * FROM Artistas;
 SELECT * FROM EstilosMusicas;
 
+SELECT * FROM EstilosMusicas;
+SELECT * FROM EstilosMusicas WHERE IdEstilosMusical = 1;
+SELECT * FROM EstilosMusicas WHERE Nome = 'Rock´n Roll';
+SELECT * FROM EstilosMusicas WHERE Nome = 'Rock´n Rol';
+SELECT * FROM EstilosMusicas WHERE Nome LIKE 'Rock´n Rol%';
+SELECT * FROM EstilosMusicas WHERE Nome LIKE '%Rock´n Roll';
+SELECT * FROM EstilosMusicas WHERE Nome LIKE '%R%';
 
-						
+SELECT Artistas.*, EstilosMusicas.*
+	FROM  Artistas
+	FULL JOIN EstilosMusicas -- ou RITHG JOIN EstilosMusical ou LEFT JOIN EstilosMusical ou só JOIN
+	ON Artistas.IdArtista = EstilosMusicas.IdEstilosMusical;
+
+INSERT INTO Artistas (Nome) VALUES ('João Neto')
+INSERT INTO EstilosMusicas(Nome) VALUES ('Funk')
+INSERT INTO EstilosMusicas(Nome) VALUES ('K-Pop')
+INSERT INTO EstilosMusicas(Nome) VALUES ('Lo-Fi')
+
 
 
 

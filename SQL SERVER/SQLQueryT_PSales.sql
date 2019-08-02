@@ -48,12 +48,25 @@ UPDATE Cursos
 SET Nome = 'Técnico em Desenvolvimento de Sistemas'
 	WHERE  IdCurso = 1;
 
-	-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
 INSERT INTO Disciplinas (Nome , IdCurso)
 				VALUES ('HTML' , '1');
 
+INSERT INTO Disciplinas (Nome , IdCurso)
+				VALUES ('CSS' , '1'),
+				 ('Cabeamento Estruturado' , '2')
+
 SELECT * FROM Disciplinas;
+SELECT * FROM Cursos;
 
 DELETE FROM Cursos
 	WHERE IdCurso = 4;
+
+SELECT Disciplinas.IdDiscipllina, Disciplinas.Nome   , Cursos.Nome
+	FROM Disciplinas
+	JOIN Cursos
+	ON Disciplinas.IdDiscipllina = Cursos.IdCurso;
+
+
+
 
