@@ -1,1 +1,2 @@
-# 1Termo---Modelagem-banco-de-dados
+# Modelagem banco de dados 2Termo
+Inicio modelagem de bancos de dados SENAI
